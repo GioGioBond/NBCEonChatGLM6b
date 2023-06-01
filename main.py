@@ -32,7 +32,7 @@ question = """请仔细阅读材料，回答下面问题：
 - 领英计划裁员多少人？
 - 吉利德收购Pharmasset的价格是多少？
 """
-#['据公开报道,截至2021年6月,吉利德公司有约16,000名员工。', '领英计划裁员716人。', 'Pharmasset被吉利德以110亿美元收购。']
+
 # 拼接context和question
 contexts = [''] + contexts  # 添加空Context（无Context预测）
 batch = ['User: %s\n\n%s\n\nAssistant:' % (context, question) for context in contexts]
@@ -111,5 +111,6 @@ def generate(max_tokens):
 
     print(question)
     print(re.split('<n><n>',re.sub('▁|<eop>','',res)))
+    #['据公开报道,截至2021年6月,吉利德公司有约16,000名员工。', '领英计划裁员716人。', 'Pharmasset被吉利德以110亿美元收购。']
 if __name__ == '__main__':
     generate(1000)
