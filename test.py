@@ -93,7 +93,7 @@ def generate(max_tokens):
     input_ids = inputs.input_ids
     attention_mask = inputs.attention_mask
 
-    attention_mask = attention_mask_unsqueeze(attention_mask)
+    #attention_mask = attention_mask_unsqueeze(attention_mask)
     #print('input attention_mask shape', attention_mask.shape)
 
     n = input_ids.shape[0]
