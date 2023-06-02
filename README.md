@@ -4,7 +4,8 @@
 效果受限于LLM，未预训练的6b容易出错，15G显存在input_ids维度为[4,242]开始不够了
 
 
-目前chatglm6b v1.1.0版本 2023-06-02下载， vocab_size是130528， inputs.attention_mask是四维
+目前chatglm6b v1.1.0版本 2023-06-02下载， vocab_size是130528， inputs.attention_mask是四维  
+下载地址  https://huggingface.co/THUDM/chatglm-6b
 
 2023-06-02  添加缓存清除；代码适配新版chatglm6b，删除旧版代码
 # 参考
