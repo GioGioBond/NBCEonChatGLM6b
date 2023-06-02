@@ -76,7 +76,7 @@ def generate(max_tokens):
                         return_dict=True,
                         use_cache=True
                        )
-
+        torch.cuda.empty_cache()
         # ===== 核心代码开始 =====
         beta = 0.25
 
