@@ -34,9 +34,9 @@ question = """请仔细阅读材料，回答下面问题：
 
 # 拼接context和question
 contexts = [''] + contexts  # 添加空Context（无Context预测）
-batch = ['User: %s\n\n%s\n\nAssistant:' % (context[:100], question) for context in contexts]
+batch = ['User: %s\n\n%s\n\nAssistant:' % (context, question) for context in contexts]
 
-batch = batch[:4]
+#batch = batch[:4]
 print('Context长度分布：', [len(text) for text in batch])
 print('Context总长度：', sum([len(text) for text in batch]))
 print(batch)
