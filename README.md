@@ -3,12 +3,9 @@
 使用朴素贝叶斯思想来扩展LLM的Context处理长度，用batch读文本数据，文本生成基于batch内投票。目前没有文本片段分割。
 效果受限于LLM，未预训练的6b容易出错，15G显存在input_ids维度为[3,270]开始不够了
 
-chatglm6b版本不同，可能会导致inputs.attention_mask维度不同，vocab_size不通，我用的是前几个月的版本，vocab_size=150528，运行main.py
 
-我的模型文件与配置文件版本不匹配，导致代码部分人能正常用，部分会有问题。
-目前正在调试最新版即vocab_size=130528的版本...
+目前chatglm6b v1.1.0版本 2023-06-02下载， vocab_size是130528， inputs.attention_mask是四维
 
-
-2023-06-02  添加缓存清除
+2023-06-02  添加缓存清除；代码适配新版chatglm6b，删除旧版代码
 # 参考
 https://github.com/bojone/NBCE
