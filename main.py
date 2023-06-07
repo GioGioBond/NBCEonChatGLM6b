@@ -34,7 +34,13 @@ question = """请仔细阅读材料，回答下面问题：
 
 # 拼接context和question
 contexts = [''] + contexts  # 添加空Context（无Context预测）
-batch = ['User: %s\n\n%s\n\nAssistant:' % (context, question) for context in contexts]
+batch = ['''
+要求： 基于已知内容，请用中文以要求的格式简短直接地回答用户的问题。
+
+已知内容： %s
+
+问题:  %s
+''' % (context, question) for context in contexts]
 
 #batch = batch[:4]
 print('Context长度分布：', [len(text) for text in batch])
